@@ -51,6 +51,7 @@ class Model
         $this->query->resultsClass = $this->resultsClass;
         $table = $this->getTable();
         $this->query->table($table);
+        $this->query->setIdColumn($this->idColumn);
 
         $suffix  = '';
 
