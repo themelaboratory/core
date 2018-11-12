@@ -1144,7 +1144,7 @@ class Model
         }
 
         $id = $this->getProperty( $id_local );
-        return $relationship->where( $this->getIdColumn(), $id)->take(1);
+        return $relationship->where( $relationship->getIdColumn(), $id)->take(1);
     }
 
     /**
