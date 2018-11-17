@@ -122,7 +122,7 @@ class Request
      */
     public function getRouterArg($key, $default = null)
     {
-        if( array_key_exists($key, $this->routerArgs) ) {
+        if( is_array($this->routerArgs) && array_key_exists($key, $this->routerArgs) ) {
             $default = $this->routerArgs[$key];
         }
 
